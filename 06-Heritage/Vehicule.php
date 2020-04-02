@@ -1,6 +1,7 @@
 <?php
 
-class Vehicule {
+
+abstract class Vehicule {
     private $brand; 
     private $isStarted;
     private $speed;
