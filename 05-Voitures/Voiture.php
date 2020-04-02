@@ -40,15 +40,17 @@ class Voiture {
 
     }
 
-    public function speed(int $speed){
-        return $this->setSpeed($this->getSpeed() + $speed);
+    public function speed(int $speed):self{
+         $this->setSpeed($this->getSpeed() + $speed);
         
+         return $this;
     }
 
-    public function slowDown(int $speed){
+    public function slowDown(int $speed) : self{
 
-       return $this->setSpeed($this->getSpeed() - $speed);
+       $this->setSpeed($this->getSpeed() - $speed);
         
+       return $this;
     }
 
     public function turn($to){
@@ -62,7 +64,7 @@ class Voiture {
     }
 
     public function stop(){
-        
+        return $this->setSpeed(0);
     }
 
     
@@ -114,11 +116,24 @@ class Voiture {
          
      }
 
+     public function getMaxSpeed()
+     {
+         return $this->maxSpeed;
+     }
+ 
+
 
 
 
 
     /* Setteurs */
+
+    private function setMaxSpeed(int $vmax): self
+    {
+        $this->vmax = $vmax;
+
+        return $this;
+    }
 
     public function setBrand(string $brand){
         $this->brand = $brand;
@@ -139,7 +154,7 @@ class Voiture {
         return $this;
     }
 
-    public function setSpeed(int $speed){
+    public function setSpeed(int $speed):self{
         $this->speed = $speed;
 
         return $this;
@@ -159,15 +174,16 @@ class Voiture {
         
     }
 
-    public function setVmax():int {
+    public function setVmax() {
 
 
         if($this->getSpeed() > $this->getVmax()){
 
-        $this->getVmax() = $this->getSpeed();
+            $this->getSpeed();
 
         }
         
+        return $this;
         
          
      }

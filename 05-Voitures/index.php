@@ -87,14 +87,17 @@ $voiture_3 = new Voiture("Dodge", "RAM 1500", "Rouge", "Janine", 0);
         <div class="d-flex justify-content-around mt-4">
             <div>
                 <?= "<strong>Marque :</strong> ".$voiture_1->getBrand()."<br>
+                <strong>Vitesse :</strong> ".$voiture_1->stop()->getSpeed()."<br>
                 <strong>Etat :</strong> ".$voiture_1->setReady(1)->start()." <br>"; ?>
             </div>
             <div>
                 <?= "<strong>Marque :</strong> ".$voiture_2->getBrand()."<br>
+                <strong>Vitesse :</strong> ".$voiture_2->stop()->getSpeed()."<br>
                 <strong>Etat :</strong> ".$voiture_2->setReady(1)->start()." <br>"; ?>
             </div>
             <div>
                 <?= "<strong>Marque :</strong> ".$voiture_3->getBrand()."<br>
+                <strong>Vitesse :</strong> ".$voiture_2->stop()->getSpeed()."<br>
                 <strong>Etat :</strong> ".$voiture_3->setReady(1)->start()." <br>."; ?>
             </div>
         </div>
